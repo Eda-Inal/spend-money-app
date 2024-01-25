@@ -4,7 +4,8 @@ import data from "../data/data"
 export const productsSlice = createSlice({
     name : 'products',
     initialState : {
-items:data
+items:data,
+price : "100,000,000,000",
     },
     reducers : {
 

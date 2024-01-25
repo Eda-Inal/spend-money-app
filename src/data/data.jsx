@@ -17,8 +17,28 @@ import yacht from "./images/yacht.jpg";
         name : "ferrari",
         price: 100,
         image:ferrari 
+        },
+        {
+            id:3,
+        name : "flipflop",
+        price: 5,
+        image:flipflop
+        },{
+            id:4,
+        name : "nba",
+        price: 100,
+        image:nba 
+        },  {
+            id:5,
+        name : "kitten",
+        price: 5,
+        image:kitten
+        },{
+            id:6,
+        name : "yacht",
+        price: 100,
+        image:yacht
         }
-
         
     ]
 

@@ -1,3 +1,8 @@
 .container{
     text-align: center;
+    width: 1100px;
+    margin: auto;
+}
+body{
+    background-color: #f1f2f6;
 }
