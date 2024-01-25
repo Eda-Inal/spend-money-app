@@ -5,11 +5,13 @@ export const productsSlice = createSlice({
     name : 'products',
     initialState : {
 items:data,
-price : "100,000,000,000",
+price : 100000000000,
     },
     reducers : {
-
+buyBtn : (state,action) => {
+state.price -= action.payload
+}
     }
 });
-
+export const {buyBtn} =productsSlice.actions;
 export default productsSlice.reducer;

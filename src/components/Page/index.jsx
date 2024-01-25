@@ -1,10 +1,14 @@
 import React from 'react'
-import { useSelector } from 'react-redux';
+import { useSelector,useDispatch } from 'react-redux';
 import "./styles.css"
+import { buyBtn } from '../../redux/productsSlice';
 
 function Page() {
   const items = useSelector(state => state.products.items);
-  console.log(items);
+  const dispatch = useDispatch();
+  const handleMath =(price) => {
+dispatch((buyBtn(price)))
+  }
   return (
     <div className='products-container'>
       <div className='product'>
@@ -19,7 +23,7 @@ function Page() {
               <div className='btn-card'>
                 <button className='btn-sell'>Sell</button>
                 <input type="text" />
-                <button className='btn-buy'>Buy</button>
+                <button className='btn-buy' onClick={()=>handleMath(item.price)}>Buy</button>
               </div>
 
             </div>
