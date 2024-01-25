@@ -9,34 +9,37 @@ import yacht from "./images/yacht.jpg";
     [
         {
             id:1,
-        name : "big-mac",
-        price: 5,
+        name : "Big Mac",
+        price: 2,
         image:bigmac
-        },{
+        },
+        {
             id:2,
-        name : "ferrari",
-        price: 100,
-        image:ferrari 
+        name : "Flip Flops",
+        price: 3,
+        image:flipflop
         },
         {
             id:3,
-        name : "flipflop",
-        price: 5,
-        image:flipflop
-        },{
-            id:4,
-        name : "nba",
-        price: 100,
-        image:nba 
-        },  {
-            id:5,
-        name : "kitten",
-        price: 5,
+        name : "Kitten",
+        price: 1500,
         image:kitten
-        },{
+        },
+        {
+            id:4,
+        name : "Ferrari",
+        price: 250000,
+        image:ferrari 
+        },
+        ,{
+            id:5,
+        name : "NBA Team",
+        price: 21200100,
+        image:nba 
+        },  ,{
             id:6,
-        name : "yacht",
-        price: 100,
+        name : "Yacht",
+        price: 700500 ,
         image:yacht
         }
         

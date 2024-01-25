@@ -27,13 +27,14 @@ button{
    
 }
 .btn-sell{
-    margin-right: 0.5rem;
+    margin-right: 0.3rem;
+    margin-left: 0.4rem;
     background: #f1f2f6;
     /* background: linear-gradient(180deg,#f53b82,#f53b57); */
     border: none;
 }
 .btn-buy{
-    margin-left: 0.5rem;
+    margin-left: 0.3rem;
     background: linear-gradient(180deg,#2ecc71,#1abc9c);
     border:none;
     color: #fff;
