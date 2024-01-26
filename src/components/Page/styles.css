@@ -34,14 +34,16 @@ button{
     border: none;
 }
 .bg-sell1{
-    background: #f1f2f6;
+    background: linear-gradient(to right, #3ddfb7, #a4f2de); 
+    color: white;
 }
 .bg-sell2{
-    background-color: rgb(232, 86, 86);
+    background: linear-gradient(to right, #bb3220, #ec7771);
+    color: white;
 }
 .btn-buy{
     margin-left: 0.3rem;
-    background: linear-gradient(180deg,#2ecc71,#1abc9c);
+    background: linear-gradient(to right, #3ddfb7, #a4f2de); 
     border:none;
     color: #fff;
 }
