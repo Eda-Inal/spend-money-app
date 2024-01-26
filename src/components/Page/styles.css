@@ -29,9 +29,15 @@ button{
 .btn-sell{
     margin-right: 0.3rem;
     margin-left: 0.4rem;
-    background: #f1f2f6;
+    
     /* background: linear-gradient(180deg,#f53b82,#f53b57); */
     border: none;
+}
+.bg-sell1{
+    background: #f1f2f6;
+}
+.bg-sell2{
+    background-color: rgb(232, 86, 86);
 }
 .btn-buy{
     margin-left: 0.3rem;

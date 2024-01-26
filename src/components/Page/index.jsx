@@ -30,7 +30,7 @@ function Page() {
               <div style={{color :"#24c486", fontSize:20,fontWeight:500}}>${item.price}</div>
               
               <div className='btn-card'>
-                <button className= "btn-sell" onClick={() =>handleSell(item)}>Sell</button>
+                <button className= {`btn-sell ${item.click >0? "bg-sell2" : "bg-sell1"}`} onClick={() =>handleSell(item)}>Sell</button>
                 <input type="text" />
                 <button className='btn-buy' onClick={()=>handleBuy(item)}>Buy</button>
               </div>
