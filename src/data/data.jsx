@@ -11,36 +11,42 @@ import yacht from "./images/yacht.jpg";
             id:1,
         name : "Big Mac",
         price: 2,
-        image:bigmac
+        image:bigmac,
+        click:0
         },
         {
             id:2,
         name : "Flip Flops",
         price: 3,
-        image:flipflop
+        image:flipflop,
+        click:0
         },
         {
             id:3,
         name : "Kitten",
         price: 1500,
-        image:kitten
+        image:kitten,
+        click:0
         },
         {
             id:4,
         name : "Ferrari",
         price: 250000,
-        image:ferrari 
+        image:ferrari ,
+        click:0
         },
         ,{
             id:5,
         name : "NBA Team",
         price: 21200100,
-        image:nba 
+        image:nba,
+        click:0
         },  ,{
             id:6,
         name : "Yacht",
         price: 700500 ,
-        image:yacht
+        image:yacht,
+        click:0
         }
         
     ]

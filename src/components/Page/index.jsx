@@ -1,14 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useSelector,useDispatch } from 'react-redux';
 import "./styles.css"
-import { buyBtn } from '../../redux/productsSlice';
+import { buyBtn,sellBtn } from '../../redux/productsSlice';
 
 function Page() {
   const items = useSelector(state => state.products.items);
+  
+  
   const dispatch = useDispatch();
-  const handleMath =(price) => {
-dispatch((buyBtn(price)))
+
+  const handleBuy =(item) => {
+      dispatch(buyBtn({id:item.id,price:item.price}));
   }
+  const handleSell =(item) => {
+    dispatch(sellBtn({id:item.id,price:item.price}));
+}
+  
+  
   return (
     <div className='products-container'>
       <div className='product'>
@@ -16,14 +24,15 @@ dispatch((buyBtn(price)))
         {
           items.map((item) => (
             <div key={item.id} className='card'>
-
+{console.log(item.click)}
               <img className='img' src={item.image} alt={item.name} />
               <div style={{fontSize:22,fontWeight:700}}>{item.name}</div>
               <div style={{color :"#24c486", fontSize:20,fontWeight:500}}>${item.price}</div>
+              
               <div className='btn-card'>
-                <button className='btn-sell'>Sell</button>
+                <button className= "btn-sell" onClick={() =>handleSell(item)}>Sell</button>
                 <input type="text" />
-                <button className='btn-buy' onClick={()=>handleMath(item.price)}>Buy</button>
+                <button className='btn-buy' onClick={()=>handleBuy(item)}>Buy</button>
               </div>
 
             </div>
