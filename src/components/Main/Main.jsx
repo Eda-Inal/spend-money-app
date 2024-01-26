@@ -3,6 +3,7 @@ import "./styles.css"
 import Price from '../Price';
 import Page from '../Page';
 import Header from '../Header';
+import Recipe from '../Recipe';
 
 function Main() {
   return (
@@ -12,7 +13,7 @@ function Main() {
       <div>
         <Page />
       </div>
-
+<Recipe/>
     </div>
   )
 }
