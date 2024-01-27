@@ -1,11 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 import data from "../data/data"
 
+
+const originalPrice = 100000000000;
 export const productsSlice = createSlice({
+    
     name: 'products',
     initialState: {
         items: data,
         price: 100000000000,
+        originalPrice: originalPrice
+       
 
     },
     reducers: {
@@ -29,12 +34,14 @@ export const productsSlice = createSlice({
             }
         },
         incrementByAmount: (state, action) => {
-            const { id, amount } = action.payload;
+            const { id, amount,price } = action.payload;
 
             const selectedItem = state.items.find((item) => item.id === id);
             
             if (selectedItem) {
-                selectedItem.click = amount
+                selectedItem.click = amount;
+               
+                state.price = state.originalPrice - amount*price
             }
         }
 

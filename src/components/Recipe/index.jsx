@@ -9,7 +9,11 @@ function Recipe() {
 
   return (
     <div className='recipe-container'>
-     <h1>Your Receipt</h1>
+      <h1>Your Receipt</h1>
+      <div className="line">
+
+   
+     
       {items.map((item) => 
         item.click > 0 && (
         
@@ -25,6 +29,7 @@ function Recipe() {
          
         )
       )}
+         </div>
     </div>
   );
 }
