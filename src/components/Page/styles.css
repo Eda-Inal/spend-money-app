@@ -9,6 +9,7 @@ input{
     width: 85px;
     height: 30px;
     text-align: center;
+    font-size: 20px;
 }
 button{
     width: 90px;
@@ -34,16 +35,17 @@ button{
     border: none;
 }
 .bg-sell1{
-    background: linear-gradient(to right, #3ddfb7, #a4f2de); 
-    color: white;
+  
+    background: #f1f2f6;
+  color: #333;
 }
 .bg-sell2{
-    background: linear-gradient(to right, #bb3220, #ec7771);
+    background: linear-gradient(180deg,#f53b82,#f53b57);
     color: white;
 }
 .btn-buy{
     margin-left: 0.3rem;
-    background: linear-gradient(to right, #3ddfb7, #a4f2de); 
+    background: linear-gradient(180deg,#2ecc71,#1abc9c);
     border:none;
     color: #fff;
 }

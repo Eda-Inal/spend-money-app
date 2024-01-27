@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import { useSelector,useDispatch } from 'react-redux';
 import "./styles.css"
-import { buyBtn,sellBtn } from '../../redux/productsSlice';
+import { buyBtn,sellBtn,incrementByAmount } from '../../redux/productsSlice';
 
 function Page() {
   const items = useSelector(state => state.products.items);
+  const [inputValue,setInputValue] = useState(0)
+  
   
   
   const dispatch = useDispatch();
@@ -15,6 +17,8 @@ function Page() {
   const handleSell =(item) => {
     dispatch(sellBtn({id:item.id,price:item.price}));
 }
+
+
   
   
   return (
@@ -31,7 +35,7 @@ function Page() {
               
               <div className='btn-card'>
                 <button className= {`btn-sell ${item.click >0? "bg-sell2" : "bg-sell1"}`} onClick={() =>handleSell(item)}>Sell</button>
-                <input type="text" />
+                <input type="number" value={inputValue}   />
                 <button className='btn-buy' onClick={()=>handleBuy(item)}>Buy</button>
               </div>
 

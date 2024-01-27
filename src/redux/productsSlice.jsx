@@ -26,12 +26,13 @@ if(selectedItem && selectedItem.click >0){
     state.price +=price;
     selectedItem.amount -= price
     selectedItem.click -=1;
-}
-    
-    
-    
+} 
+    },
+    incrementByAmount : (state,action) => {
+        
+        
     }
     }
 });
-export const {buyBtn,sellBtn} =productsSlice.actions;
+export const {buyBtn,sellBtn,incrementByAmount} =productsSlice.actions;
 export default productsSlice.reducer;
