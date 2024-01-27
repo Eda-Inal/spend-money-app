@@ -9,17 +9,20 @@ function Recipe() {
 
   return (
     <div className='recipe-container'>
-      <h1>Your Receipt</h1>
+     <h1>Your Receipt</h1>
       {items.map((item) => 
         item.click > 0 && (
-            
+        
           <div key={item.id} className='recipe-box'>
-            <div>{item.name}</div>
-            <div>X{item.click}</div>
-            <div>{item.amount}</div>
-         
+            <div className='item'>
+            <div className='name'>{item.name}</div>
+            <div className='click'>X{item.click}</div>
+            <div  className='pricee'>{item.amount}</div>
+            </div>
+            
+       
           </div>
-          
+         
         )
       )}
     </div>

@@ -2,16 +2,30 @@
     width: 1000px;
     background-color: white;
     margin: auto;
+    
 }
 .recipe-box {
     width: 400px;
     margin: auto;
     font-size: 18px;
     display: flex;
+    flex-direction: column;
+    
  
     
     justify-content: space-between;
    
     color: #333;
     font-weight: 200px;
+  }
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+   
+
+    margin-bottom: 10px;
+  }
+  .name, .pricee,.click{
+flex: 1;
   }
