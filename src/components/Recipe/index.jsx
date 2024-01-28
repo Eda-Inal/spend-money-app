@@ -6,31 +6,40 @@ import "./styles.css"
 
 function Recipe() {
   const items = useSelector(state => state.products.items);
+  const price = useSelector((state) => state.products.price);
+  const originalPrice = useSelector((state) => state.products.originalPrice);
 
   return (
-    <div className='recipe-container'>
-      <h1>Your Receipt</h1>
-      <div className="line">
-
+   <>
+   {price ===originalPrice ? "" :
    
+   
+   <div className='recipe-container'>
+   <h1>Your Receipt</h1>
+   <div className="line">
+
+
+  
+   {items.map((item) => 
+     item.click > 0 && (
      
-      {items.map((item) => 
-        item.click > 0 && (
-        
-          <div key={item.id} className='recipe-box'>
-            <div className='item'>
-            <div className='name'>{item.name}</div>
-            <div className='click'>X{item.click}</div>
-            <div  className='pricee'>{item.amount}</div>
-            </div>
-            
-       
-          </div>
-         
-        )
-      )}
+       <div key={item.id} className='recipe-box'>
+         <div className='item'>
+         <div className='name'>{item.name}</div>
+         <div className='click'>X{item.click}</div>
+         <div  className='pricee'>{item.amount}</div>
          </div>
-    </div>
+         
+    
+       </div>
+      
+     )
+   )}
+      </div>
+ </div>
+   }
+   
+    </>
   );
 }
 
