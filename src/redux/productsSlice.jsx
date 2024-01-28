@@ -40,7 +40,7 @@ export const productsSlice = createSlice({
             
             if (selectedItem) {
                 selectedItem.click = amount;
-               
+               selectedItem.amount = amount*price
                 state.price = state.originalPrice - amount*price
             }
         }
