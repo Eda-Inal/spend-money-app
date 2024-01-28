@@ -39,14 +39,14 @@ import yacht from "./images/yacht.jpg";
         click:0,
         amount:0
         },
-        ,{
+        {
             id:5,
         name : "NBA Team",
         price: 21200100,
         image:nba,
         click:0,
         amount:0
-        },  ,{
+        }  ,{
             id:6,
         name : "Yacht",
         price: 700500 ,

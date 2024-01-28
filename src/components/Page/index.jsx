@@ -39,7 +39,7 @@ function Page() {
                 <button className={`btn-sell ${item.click > 0 ? "bg-sell2" : "bg-sell1"}`} onClick={() => handleSell(item)}>Sell</button>
                 <input
                   type="number"
-                  value={item.click?item.click :0}
+                  value={item.click >0 ?item.click :0}
                   onChange={(e) => {
                     dispatch(incrementByAmount({ id: item.id, amount: parseInt(e.target.value),price:item.price }))
                   }}

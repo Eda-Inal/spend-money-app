@@ -1,5 +1,6 @@
 .price{
     width: 1000px;
+
     margin-bottom: 0.4rem;
    margin: 15px auto ;
    transition: color 1.0s ease;
@@ -8,4 +9,5 @@
 font-size: 15px;
     font-weight: 500;
     color: #fff;
+  
 }
