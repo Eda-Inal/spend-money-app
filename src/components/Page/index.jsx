@@ -5,14 +5,17 @@ import { buyBtn, sellBtn, incrementByAmount } from '../../redux/productsSlice';
 
 function Page() {
   const items = useSelector(state => state.products.items);
-  const [inputValues, setInputValues] = useState({})
-
-
+  const price = useSelector((state) => state.products.price);
+  
+console.log(price);
 
   const dispatch = useDispatch();
 
   const handleBuy = (item) => {
-    dispatch(buyBtn({ id: item.id, price: item.price }));
+    
+
+  dispatch(buyBtn({ id: item.id, price: item.price }));
+
 
 
   }
@@ -30,7 +33,7 @@ function Page() {
         {
           items.map((item) => (
             <div key={item.id} className='card'>
-              {console.log(item.click)}
+              
               <img className='img' src={item.image} alt={item.name} />
               <div style={{ fontSize: 22, fontWeight: 700 }}>{item.name}</div>
               <div style={{ color: "#24c486", fontSize: 20, fontWeight: 500 }}>${item.price}</div>
