@@ -38,12 +38,14 @@ function Page() {
               <div className='btn-card'>
                 <button className={`btn-sell ${item.click > 0 ? "bg-sell2" : "bg-sell1"}`} onClick={() => handleSell(item)}>Sell</button>
                 <input
-                  type="number"
-                  value={item.click >0 ?item.click :0}
-                  onChange={(e) => {
-                    dispatch(incrementByAmount({ id: item.id, amount: parseInt(e.target.value),price:item.price }))
-                  }}
-                />
+  value={item.click > 0 ? item.click : 0}
+  onChange={(e) => {
+    const inputValue = e.target.value;
+    const parsedValue = inputValue !== '' ? parseInt(inputValue, 10) : 0;
+    dispatch(incrementByAmount({ id: item.id, amount: parsedValue, price: item.price }))
+  }}
+/>
+
 
                 <button className='btn-buy' onClick={() => handleBuy(item)}>Buy</button>
               </div>

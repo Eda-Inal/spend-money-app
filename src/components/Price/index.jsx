@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux'
 function Price() {
     const price = useSelector((state) => state.products.price);
     
+    
 
   return (
     <div className='price'>
