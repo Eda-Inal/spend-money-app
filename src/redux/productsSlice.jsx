@@ -34,16 +34,17 @@ export const productsSlice = createSlice({
             }
         },
         incrementByAmount: (state, action) => {
-            const { id, amount,price } = action.payload;
-
+            const { id, amount, price } = action.payload;
             const selectedItem = state.items.find((item) => item.id === id);
-            
+          
             if (selectedItem) {
-                selectedItem.click = amount;
-               selectedItem.amount = amount*price
-                state.price = state.originalPrice - amount*price
+              const totalAmount = state.items.reduce((total, item) => total + item.amount, 0);
+              selectedItem.click = amount;
+              selectedItem.amount = amount * price;
+              state.price = state.originalPrice - totalAmount;
             }
-        }
+          }
+          
 
     }
 });
